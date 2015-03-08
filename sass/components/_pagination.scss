@@ -1,0 +1,70 @@
+
+// ------------------------
+// Pagination component
+// --------------------------------------------------
+
+  .pagination > li > a, 
+  .pagination > li > span {
+    border: 0;
+    border-radius: 100% !important;
+
+    color: inherit;
+
+    padding: 0;
+    margin: 0 .1em;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .pagination > li > a i {
+    font-size: 2em;
+  }
+
+  .pagination > li > a:hover, 
+  .pagination > li > span:hover, 
+  .pagination > li > a:focus, 
+  .pagination > li > span:focus {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .pagination > .active > a, 
+  .pagination > .active > span, 
+  .pagination > .active > a:hover, 
+  .pagination > .active > span:hover, 
+  .pagination > .active > a:focus, 
+  .pagination > .active > span:focus {
+    cursor: pointer;
+    @include color-profile-primary();
+  }
+
+  .pagination > .disabled > span, 
+  .pagination > .disabled > span:hover, 
+  .pagination > .disabled > span:focus, 
+  .pagination > .disabled > a, 
+  .pagination > .disabled > a:hover, 
+  .pagination > .disabled > a:focus {
+    border: 0;
+    background-color: transparent;
+  }
+
+  .pagination-sm > li > a, 
+  .pagination-sm > li > span {
+    padding: 0;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  .pagination-lg > li > a, 
+  .pagination-lg > li > span {
+    padding: 0;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }

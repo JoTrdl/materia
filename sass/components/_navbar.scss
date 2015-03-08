@@ -1,0 +1,44 @@
+
+// ------------------------
+// Navbar component
+// --------------------------------------------------
+  .navbar {
+    border: 0;
+    border-radius: 0;
+
+    .navbar-form {
+      margin-top: $basespacing*1px;
+      margin-bottom: $basespacing*1px;
+    }
+
+    .navbar-form .form-control {
+      margin-bottom: 0;
+      min-height: $basespacing*6px;
+      height: $basespacing*3px;
+      line-height: $basespacing*3px;
+      color: $color-black-strong;
+    }
+  }
+  
+  // Inverse
+  .navbar-inverse {
+    @include colorprofile(blue-grey, 800);
+
+    .navbar-brand, .navbar-nav > li > a {
+      color: $color-white-strong;
+    }
+
+    .navbar-nav > .active > a, 
+    .navbar-nav > .active > a:hover, 
+    .navbar-nav > .active > a:focus {
+      @include color-profile-primary();
+    }
+
+    .navbar-nav > .open > a 
+    .navbar-nav > .open > a:hover, 
+    .navbar-nav > .open > a:focus {
+      background-color: transparent;
+    }
+
+    .navbar-form .form-control { color: $color-white-strong; }
+  }

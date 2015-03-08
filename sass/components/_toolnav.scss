@@ -1,0 +1,24 @@
+// ------------------------
+// Toolnav component
+// --------------------------------------------------
+
+.toolnav {
+  .toolbar-nav a {
+    border-radius: 0;
+    height: $toolbar-default-height;
+    line-height: $toolbar-default-height;
+    width: auto;
+    padding: 0 $basespacing*3px;
+  }
+
+  &.toolbar-expanded .toolbar-nav { padding-top: 0; }
+
+  @include screen-sm() {
+    .toolbar-header { display: none; }
+  }
+
+  .toolbar-nav { display: none; }
+  @include screen-sm() {
+    .toolbar-nav { display: block; }
+  }
+}

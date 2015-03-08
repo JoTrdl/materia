@@ -1,0 +1,11 @@
+// ------------------------
+// Popover component
+// --------------------------------------------------
+  .popover {
+    background-color: $color-black-strong;
+    color: $color-white;
+    border: 0;
+    border-radius: 3px;
+    .arrow { display: none; }
+  }
+

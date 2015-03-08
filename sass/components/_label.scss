@@ -1,0 +1,27 @@
+
+// ------------------------
+// Label component
+// --------------------------------------------------
+  .label {
+    color: inherit;
+    font-weight: 500;
+    border-radius: 0;
+  }
+  .label-default {
+    @include color-profile-default();
+  }
+  .label-primary {
+    @include color-profile-primary();
+  }
+  .label-success {
+    @include color-profile-success();
+  }
+  .label-info {
+    @include color-profile-info();
+  }
+  .label-warning {
+    @include color-profile-warning();
+  }
+  .label-danger {
+    @include color-profile-danger();
+  }

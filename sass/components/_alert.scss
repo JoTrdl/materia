@@ -1,0 +1,39 @@
+
+// ------------------------
+// Alert component
+// --------------------------------------------------
+  .alert {
+    border-radius: 3px;
+    padding: $basespacing*5px;
+    border: 0;
+    
+    .alert-link { color: inherit !important; }
+  }
+
+  .alert-success  {
+    @include color-profile-success();
+  }
+  .alert-info  {
+    @include color-profile-info();
+  }
+  .alert-warning  {
+    @include color-profile-warning();
+  }
+  .alert-danger {
+    @include color-profile-danger();
+  }
+
+  .alert-dismissible {
+    padding-right: $basespacing*5px;
+
+    .close {
+      font-size: 2em;
+      text-shadow: none;
+      opacity: 1;
+      color: inherit;
+      outline: 0;
+
+      top: -.75em;
+      right: -.75em;
+    }
+  }

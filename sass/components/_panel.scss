@@ -1,0 +1,40 @@
+
+// ------------------------
+// Panel component
+// --------------------------------------------------
+  .panel {
+    border-radius: 3px;
+    border: 0;
+    @include shadow(1);
+  }
+
+  .panel-heading {
+    @include colorprofile(grey, 200);
+    font-weight: 500;
+    border: 0;
+
+    .panel-title { font-weight: 500; }
+  }
+
+  .panel-footer { 
+    border: 0;
+  }
+
+  .panel-default > .panel-heading {
+    @include color-profile-default();
+  }
+  .panel-primary > .panel-heading {
+    @include color-profile-primary();
+  }
+  .panel-success > .panel-heading {
+    @include color-profile-success();
+  }
+  .panel-info > .panel-heading {
+    @include color-profile-info();
+  }
+  .panel-warning > .panel-heading {
+    @include color-profile-warning();
+  }
+  .panel-danger > .panel-heading {
+    @include color-profile-danger();
+  }

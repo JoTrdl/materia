@@ -1,0 +1,59 @@
+
+/*
+ * ------------------------
+ * Helpers
+ * --------------------------------------------------
+ */
+
+  // ------------------------
+  // Text color
+  // --------------------------------------------------
+    .text-muted { color: $color-muted; }
+    .text-primary { color: $color-primary; }
+    .text-success { color: $color-success; }
+    .text-info { color: $color-info; }
+    .text-warning { color: $color-warning; }
+    .text-danger { color: $color-danger; }
+
+  // ------------------------
+  // Background color
+  // --------------------------------------------------
+    .bg-primary { @include color-profile-primary(); }
+    .bg-success { @include color-profile-success(); }
+    .bg-info { @include color-profile-info(); }
+    .bg-warning { @include color-profile-warning(); }
+    .bg-danger { @include color-profile-danger(); }
+
+  // ------------------------
+  // Text weight
+  // --------------------------------------------------
+
+    .text-light  { font-weight: 300; }
+    .text-normal { font-weight: 400; }
+    .text-bold   { font-weight: 500; } 
+
+  // ------------------------
+  // Vertical align
+  // --------------------------------------------------
+  
+    .valign {
+      display: table;
+      width: 100%;
+      height: 100%;
+      & > * {
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+
+  // ------------------------
+  // Vertical spacing classes
+  // --------------------------------------------------
+  
+    @for $i from 1 through 5 {
+      .vspace#{$i} { margin-top: $i + em !important; }
+    }
+
+

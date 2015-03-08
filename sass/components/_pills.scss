@@ -1,0 +1,38 @@
+
+// ------------------------
+// Pills component
+// --------------------------------------------------
+
+  .nav .open > a, 
+  .nav .open > a:hover, 
+  .nav .open > a:focus {
+    background: transparent;
+  }
+
+  .nav-pills > li > a, 
+  .nav-pills > li > a:hover, 
+  .nav-pills > li > a:focus {
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .nav-pills > li.active > a, 
+  .nav-pills > li.active > a:hover, 
+  .nav-pills > li.active > a:focus {
+    @include color-profile-primary();
+
+    .material-ripple { background-color: $color-ripple-light; }
+  }
+
+  .nav-pills > li + li {
+    margin: 0;
+  }
+
+  .nav-pills > li {
+    & > a {
+      border-radius: 1px;
+    }
+  }
+
+  .nav-pills .dropdown-menu { margin-top: -3em; }
+

@@ -1,0 +1,16 @@
+// ------------------------
+// Breadcrumb component
+// --------------------------------------------------
+  .breadcrumb {
+    border-radius: 0;
+    background-color: transparent;
+    color: $color-primary;
+
+    & > li + li:before {
+      color: $color-black-strong; 
+      content: ">";
+      margin: 0 .5em;
+    }
+
+    li.active { color: $color-black-strong; }
+  }

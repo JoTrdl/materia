@@ -1,0 +1,72 @@
+
+// ------------------------
+// Toolbar component
+// --------------------------------------------------
+
+  $toolbar-default-height: 65px;
+  $toolbar-expanded-height: 165px;
+
+  .toolbar {
+    font-size: 1.75em;
+    width: 100%;
+    overflow: hidden;
+    
+    .container-fluid {
+      padding-right: 7.5px;
+      padding-left: 7.5px;
+    }
+
+    .toolbar-header {
+      margin-left: 0;
+      margin-right: 0;
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 200px;
+      overflow: hidden;
+
+      .toolbar-title { margin-left: 8px; }
+    }
+
+    .toolbar-nav {
+      white-space: nowrap;
+      text-align: right;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+      li { 
+        display: inline-block;
+        margin-left: 8px;
+      }
+    }
+
+    a {
+      border-radius: 100%;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .container-fluid {
+      display: table;
+      height: $toolbar-default-height;
+      width: 100%;
+    }
+
+    .toolbar-header, .toolbar-nav {
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+  }
+
+  .toolbar-expanded { 
+    .container-fluid { height: $toolbar-expanded-height; }
+    .toolbar-header, .toolbar-nav { vertical-align: top; padding-top: 15px; }
+  }

@@ -1,0 +1,12 @@
+// ------------------------
+// Tooltip component
+// --------------------------------------------------
+.tooltip { 
+  font-size: 13px;
+}
+.tooltip-arrow { display: none; }
+.tooltip-inner {
+  border-radius: 2px;
+  padding: $basespacing*1px $basespacing*2px;
+  background-color: $color-black-strong;
+}

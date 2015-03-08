@@ -1,0 +1,15 @@
+
+// ------------------------
+// Badge component
+// --------------------------------------------------
+  .badge {
+    border-radius: 2px;
+    font-weight: 500;
+    @include color-profile-primary();
+  }
+
+  .list-group-item.active > .badge, 
+  .nav-pills > .active > a > .badge {
+    color: $color-black-strong;
+    background-color: $color-white;
+  }

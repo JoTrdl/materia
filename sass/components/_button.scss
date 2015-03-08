@@ -1,0 +1,261 @@
+
+// ------------------------
+// Default .btn
+// --------------------------------------------------
+  .btn:focus, .btn:active:focus, 
+  .btn.active:focus, .btn.focus, 
+  .btn:active.focus, .btn.active.focus {
+    outline: 0;
+  }
+
+  .btn-default, .btn-primary, .btn-success,
+  .btn-info, .btn-warning, .btn-danger, .btn-link {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background-color: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    min-width: 5em;
+    min-height: 1em;
+    margin: 0 .25em;
+    padding: 0.5em 1.5em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    &:first-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &:hover {
+      outline: none;
+      @include shadow(1);
+    }
+    &:active {
+      @include shadow(2);
+    }
+    &[disabled], &.disabled {
+      box-shadow: none;
+    }
+  }
+
+  .btn-default, .btn-default:hover, 
+  .btn-default:focus, .btn-default:active { 
+    @include color-profile-default();
+  }
+  .btn-primary, .btn-primary:hover, 
+  .btn-primary:focus, .btn-primary:active  { 
+    @include color-profile-primary();
+  }
+  .btn-success, .btn-success:hover, 
+  .btn-success:focus, .btn-success:active  { 
+    @include color-profile-success();
+  }
+  .btn-info, .btn-info:hover, 
+  .btn-info:focus, .btn-info:active  {
+    @include color-profile-info();
+  }
+  .btn-warning, .btn-warning:hover, 
+  .btn-warning:focus, .btn-warning:active  { 
+    @include color-profile-warning();
+  }
+  .btn-danger, .btn-danger:hover, 
+  .btn-danger:focus, .btn-danger:active  { 
+    @include color-profile-danger();
+  }
+  .btn-link, .btn-link:hover, 
+  .btn-link:focus, .btn-link:active  { 
+    background-color: transparent;
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  .btn-primary[disabled], .btn-primary.disabled  { 
+    background-color: transparentize($color-primary, 0.2);
+  }
+  .btn-success[disabled], .btn-success.disabled  { 
+    background-color: transparentize($color-success, 0.2);
+  }
+  .btn-info[disabled], .btn-info.disabled  { 
+    background-color: transparentize($color-info, 0.2);
+  }
+  .btn-warning[disabled], .btn-warning.disabled  { 
+    background-color: transparentize($color-warning, 0.2);
+  }
+  .btn-danger[disabled], .btn-danger.disabled  { 
+    background-color: transparentize($color-danger, 0.2);
+  }
+
+
+// ------------------------
+// Flat button .btn-flat
+// --------------------------------------------------
+  .btn-flat, .btn-flat:hover, 
+  .btn-flat:focus, .btn-flat:active  { 
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .btn-flat.btn-primary { 
+    color: $color-primary; 
+  }
+  .btn-flat.btn-success { 
+    color: $color-success;
+  }
+  .btn-flat.btn-info { 
+    color: $color-info;
+  }
+  .btn-flat.btn-warning { 
+    color: $color-warning;
+  }
+  .btn-flat.btn-danger { 
+    color: $color-danger;
+  }
+  .btn-flat.btn-link { 
+    color: $color-black-strong;
+    .mtr-ripple { 
+      background-color: transparent !important;
+    }
+    &:active { text-decoration: underline; }
+  }
+
+// ------------------------
+// Raised button .btn-raised
+// --------------------------------------------------
+  .btn-raised  { 
+    @include shadow(1);
+
+    &:hover {
+      @include shadow(2);
+    }
+    &:active {
+      @include shadow(2);
+    }
+    &[disabled], &.disabled {
+      box-shadow: none;
+    }
+  }
+
+// ------------------------
+// Floating button .btn-floating
+// --------------------------------------------------
+  .btn-floating, .btn-floating-mini  { 
+    border-radius: 50%;
+    font-size: 2em;
+    line-height: 2em;
+    width: 2em;
+    height: 2em;
+    min-width: 2em;
+    text-align: center;
+    cursor: pointer;
+  
+    padding: 0;
+
+    @include shadow(1);
+
+    &:hover {
+      @include shadow(2);
+    }
+    &:active {
+      @include shadow(2);
+    }
+    &[disabled], &.disabled {
+      box-shadow: none;
+    }
+  }
+  .btn-floating-mini {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    width: 1.5em;
+    min-width: 1.5em;
+    height: 1.5em;
+  }
+
+
+// ------------------------
+// Button group
+// --------------------------------------------------
+  .btn-group {
+    
+    .btn {
+      margin-right: 0;
+      box-shadow: none;
+    }
+
+    .dropdown-toggle {
+      min-width: 0;
+      margin-left: 0;
+      box-shadow: none;
+
+      &:active { box-shadow: none; }
+    }
+
+    &:hover {
+      @include shadow(1);
+    }
+
+    &.btn-flat:hover {
+      @include shadow(0);
+    }
+
+    &.open .dropdown-toggle {
+      box-shadow: none;
+    }
+
+    .btn-group {
+      box-shadow: none;
+    }
+  }
+
+// ------------------------
+// Button dropdown
+// --------------------------------------------------
+  .open > .dropdown-toggle.btn-default { background-color: $color-default; }
+  .open > .dropdown-toggle.btn-primary { background-color: $color-primary; }
+  .open > .dropdown-toggle.btn-success { background-color: $color-success; }
+  .open > .dropdown-toggle.btn-info { background-color: $color-info; }
+  .open > .dropdown-toggle.btn-warning { background-color: $color-warning; }
+  .open > .dropdown-toggle.btn-danger { background-color: $color-danger; }
+
+
+  // Dropdown
+  .btn-primary ~ .dropdown-menu > li > a {
+    color: $color-primary;
+  }
+
+  .btn-success ~ .dropdown-menu > li > a {
+    color: $color-success;
+  }
+
+  .btn-info ~ .dropdown-menu > li > a {
+    color: $color-info;
+  }
+
+  .btn-warning ~ .dropdown-menu > li > a {
+    color: $color-warning;
+  }
+
+  .btn-danger ~ .dropdown-menu > li > a {
+    color: $color-danger;
+  }
+
+// ------------------------
+// Button group vertical
+// --------------------------------------------------
+  .btn-group-vertical {
+    &:hover { @include shadow(1); }
+    .btn { 
+      margin: 0; 
+      &:hover { box-shadow: none; }
+    }
+  }
+
+// ------------------------
+// Button sizes
+// --------------------------------------------------
+  .btn-lg { font-size: 18px; line-height: 1.33; }
+  .btn-sm { font-size: 12px; line-height: 2; }
+  .btn-xs { font-size: 10px; line-height: 2.6; }

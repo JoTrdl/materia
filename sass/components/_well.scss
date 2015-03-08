@@ -1,0 +1,11 @@
+
+// ------------------------
+// Well component
+// --------------------------------------------------
+.well {
+  @include shadow(1);
+  border: 0;
+  border-radius: 3px;
+}
+
+.well-sm { padding-left: $basespacing*4px; }

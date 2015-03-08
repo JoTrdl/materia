@@ -1,0 +1,47 @@
+
+// ------------------------
+// Pager component
+// --------------------------------------------------
+  .pager li > a, .pager li > span {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 3em;
+  }
+
+  .pager li > a:focus, 
+  .pager li > a:hover, 
+  .pager li > a:active {
+    outline: 0;
+    background-color: transparent; 
+  }
+
+  .pager li.disabled > a,
+  .pager li.disabled > a:hover,
+  .pager li.disabled > a:active,
+  .pager li.disabled > a:focus {
+    background-color: transparent;
+    color: $color-muted;
+  }
+
+  .pager li.previous {
+    i:first-child {
+      margin-left: -2px;
+    }
+    i:last-child {
+      margin-left: -24px;
+    }
+  }
+
+  .pager li.next {
+    i:first-child {
+      margin-right: -24px;
+    }
+    i:last-child {
+      margin-right: -2px;
+    }
+  }

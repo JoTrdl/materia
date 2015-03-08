@@ -1,0 +1,31 @@
+
+// ------------------------
+// Default Bootstrap responsive mixins
+// --------------------------------------------------
+  @mixin screen-lg() {
+    @media screen and ( min-width: $sreen-lg-min + px ) {
+      @content;
+    }
+  }
+
+  @mixin screen-md() {
+    @media screen and ( min-width: $sreen-md-min + px ) {
+      @content;
+    }
+  }
+
+  @mixin screen-sm() {
+    @media screen and ( min-width: $sreen-sm-min + px ) {
+      @content;
+    }
+  }
+
+// ------------------------
+// No select
+// --------------------------------------------------
+  @mixin noselect() {
+    -webkit-touch-callout: none;
+    user-select: none;
+
+    cursor: default;
+  }

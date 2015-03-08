@@ -1,0 +1,362 @@
+
+// ------------------------
+// Input
+// --------------------------------------------------
+$color-normal: color(grey, 600);
+$color-normal-valued: color(grey, 600);
+
+// ------------------------
+// Form control
+// --------------------------------------------------
+  .form-control {
+
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    
+    outline: none;
+    height: 2.25em;
+    min-height: 2.25em;
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    line-height: 1em;
+    font-weight: 500;
+
+    border-bottom: 1px solid $color-normal;
+
+    margin-bottom: .75em;
+
+    z-index: 1;
+    position: relative;
+
+    &.floating + label {
+      color: $color-normal;
+      position: absolute;
+      top: .5em;
+      left: $basespacing*3px;
+      cursor: text;
+      font-weight: 500;
+      font-size: 1em;
+      
+      margin: 0;
+      line-height: 1em;
+
+      transition: all 0.25s ease;
+      transform: translate3d(0,0,0);
+      will-change: top, font-size;
+      z-index: 0;
+      @include noselect();
+    }
+
+    &:focus {
+      box-shadow: 0 1px 0 0 $color-primary;
+      border-bottom: 1px solid $color-primary;
+    }
+
+    &.floating:focus + label, &.floating.valued + label {
+      top: -1em;
+      font-size: .8em;
+    }
+
+    &:focus + label {
+      color: $color-primary;
+    }
+    
+    & + .error-block { display: none; }
+    &:focus:invalid { 
+      border-color: $color-danger;
+      & + label { color: $color-danger; }
+      &:focus, &:active {
+        box-shadow: 0 1px 0 0 $color-danger;
+        border-color: $color-danger;
+      }
+      & + .error-block { display: block; }
+    }
+
+  }
+
+
+  .form-control[disabled], 
+  .form-control[readonly], 
+  fieldset[disabled] .form-control {
+    background-color: transparent;
+    border-bottom-style: dashed;
+    cursor: default;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+// ------------------------
+// Input has-*
+// --------------------------------------------------
+  .has-warning .help-block, 
+  .has-warning .control-label, 
+  .has-warning .radio, 
+  .has-warning .checkbox, 
+  .has-warning .radio-inline, 
+  .has-warning .checkbox-inline, 
+  .has-warning.radio label, 
+  .has-warning.checkbox label, 
+  .has-warning.radio-inline label, 
+  .has-warning.checkbox-inline label {
+    color: $color-warning;
+  }
+  .has-warning .form-control {
+    border-color: $color-warning;
+    box-shadow: none;
+    & + label { color: $color-warning; }
+    &:focus, &:active {
+      box-shadow: none;
+      border-color: $color-warning;
+    }
+  }
+
+  .has-error .help-block, 
+  .has-error .control-label, 
+  .has-error .radio, 
+  .has-error .checkbox, 
+  .has-error .radio-inline, 
+  .has-error .checkbox-inline, 
+  .has-error.radio label, 
+  .has-error.checkbox label, 
+  .has-error.radio-inline label, 
+  .has-error.checkbox-inline label {
+    color: $color-danger;
+  }
+  .has-error .form-control {
+    border-color: $color-danger;
+    box-shadow: none;
+    & + label { color: $color-danger; }
+    &:focus, &:active {
+      box-shadow: none;
+      border-color: $color-danger;
+    }
+  }
+
+  .has-success .help-block, 
+  .has-success .control-label, 
+  .has-success .radio, 
+  .has-success .checkbox, 
+  .has-success .radio-inline, 
+  .has-success .checkbox-inline, 
+  .has-success.radio label, 
+  .has-success.checkbox label, 
+  .has-success.radio-inline label, 
+  .has-success.checkbox-inline label {
+    color: $color-success;
+  }
+  .has-success .form-control {
+    border-color: $color-success;
+    box-shadow: none;
+    & + label { color: $color-success; }
+    &:focus, &:active {
+      box-shadow: none;
+      border-color: $color-success;
+    }
+  }
+
+// ------------------------
+// Form control sizes
+// --------------------------------------------------
+  .form-control.input-lg {
+    font-size: 1.5em;
+  }
+  .form-control.input-sm {
+    font-size: .9em;
+  }
+
+// ------------------------
+// Textarea
+// --------------------------------------------------
+  textarea.form-control {
+    line-height: 1.45em;
+    padding-top: 0;
+    margin:0;
+    margin-top: $basespacing*1px;
+  }
+
+// ------------------------
+// Help block / error-block
+// --------------------------------------------------
+  .help-block, .error-block {
+    font-size: .9em;
+    line-height: 1.2em;
+    color: $color-normal-valued;
+  }
+
+  .error-block { color: $color-danger; }
+
+// ------------------------
+// Select
+// --------------------------------------------------
+  select, select.form-control {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEVmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaP/QSjAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 99.7% 70%;
+  }
+  select[multiple], select.form-control[multiple] { background: none;}
+
+
+// ------------------------
+// Form hoizontal
+// --------------------------------------------------
+  .form-horizontal .radio, 
+  .form-horizontal .checkbox, 
+  .form-horizontal .radio-inline, 
+  .form-horizontal .checkbox-inline {
+    padding-top: $basespacing*1px;
+  }
+
+// ------------------------
+// Form legend
+// --------------------------------------------------
+  form legend {
+    border: none;
+    font-weight: 500;
+  }
+
+// ------------------------
+// Checkbox
+// --------------------------------------------------
+  .checkbox {
+    label {
+      padding-left: $basespacing*5px;
+    }
+  }
+  input[type="checkbox"], 
+  .checkbox input[type="checkbox"], 
+  .checkbox-inline input[type="checkbox"] {
+    margin-left: -$basespacing*5px;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: 0;
+    color: $color-primary;
+
+    &:after {
+      content: "";
+      display: block;
+      width: $basespacing*3px;
+      height: $basespacing*3px;
+      margin-top: -2px;
+      margin-right: $basespacing*1px;
+      border: 2px solid color(grey, 600);
+      border-radius: 2px;
+      transition: 240ms;
+    }
+
+    &:checked:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: $basespacing*1px;
+      display: table;
+      width: $basespacing*1px;
+      height: $basespacing*2px;
+      border: 2px solid #fff;
+      border-top-width: 0;
+      border-left-width: 0;
+      transform: rotate(45deg);
+    }
+    &:checked:after {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+// ------------------------
+// Radio hoizontal
+// --------------------------------------------------
+  input[type="radio"], 
+  .radio input[type="radio"], 
+  .radio-inline input[type="radio"] {
+    margin-top: $basespacing*1px;
+    margin-left: -$basespacing*5px;
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    outline: 0;
+    color: $color-primary;
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      width: $basespacing*3px;
+      height: $basespacing*3px;
+      margin-top: -1px;
+      border-radius: 50%;
+      transition: 240ms;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $color-primary;
+      transform: scale(0);
+    }
+
+    &:after {
+      border: 2px solid color(grey, 600);
+    }
+
+    &:checked:before {
+      transform: scale(0.5);
+    }
+
+    &:checked:after {
+      border-color: $color-primary;
+    }
+  }
+
+// ------------------------
+// Common radio/checkbox
+// --------------------------------------------------
+  .radio label, .checkbox label {
+    min-height: $basespacing*5px;
+    padding-left: $basespacing*6px;
+    .mtr-ripple-wrapper {
+      left: -8px;
+      top: -8px;
+      width: $basespacing*8px;
+      height: $basespacing*8px;
+      border-radius: 100%;
+      z-index: 0;
+      position: absolute;
+      -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+      &.mtr-btn { position: absolute; }
+    }
+  }
+
+  .checkbox label .mtr-ripple-wrapper {
+    left: -8px;
+    top: -10px;
+  }
+
+// ------------------------
+// Input add on
+// --------------------------------------------------
+  .input-group .form-control {
+    height: 2.7em;
+    box-sizing: border-box;
+  } 
+  .input-group-addon {
+    background-color: transparent;
+    border: 0;
+  }
+  .input-group-btn { 
+    font-size: 1em;
+  }

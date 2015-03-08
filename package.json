@@ -1,0 +1,19 @@
+{
+  "name": "materia",
+  "description": "A Bootstrap theme inspired by Google Material Design",
+  "version": "1.0.0",
+  "author": "Johann Troendle",
+  "maintainers": [
+    "Johann Troendle"
+  ],
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-connect": "latest",
+    "gulp-sass": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-clean": "latest"
+  }
+}

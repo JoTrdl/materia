@@ -1,0 +1,35 @@
+
+// ------------------------
+// Dropdown component
+// --------------------------------------------------
+.dropdown-menu {
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+
+  display: block;
+  
+  transform: scaleY(0);
+  transform-origin: top center;
+
+  transition: transform .2s ease-out;
+
+  will-change: transform;
+  margin-top: -2.5em;
+
+  @include shadow(1);
+}
+
+.dropdown-menu > li > a { 
+  line-height: 2.5em;
+  padding: .5em 1em;
+}
+
+.dropdown-menu .divider {
+  margin: 0;
+  background-color: $color-grey;
+}
+
+.open > .dropdown-menu {
+  transform: scaleY(1);
+}

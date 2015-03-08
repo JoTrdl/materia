@@ -1,0 +1,31 @@
+
+// ------------------------
+// Modal component
+// --------------------------------------------------
+  .modal-content {
+    border: 0;
+    border-radius: 3px;
+    @include shadow(5);
+  }
+  .modal-header {
+    border: 0;
+
+    .close {
+      font-size: 2em;
+      text-shadow: none;
+      opacity: 1;
+      color: $color-black;
+      outline: 0;
+    }
+  }
+  .modal-title {
+    font-weight: 500;
+  }
+  .modal-footer {
+    padding: $basespacing*2px;
+    border: 0;
+
+    .btn { padding: $basespacing*2px; }
+  }
+
+  .modal-backdrop.in { opacity: .75; }

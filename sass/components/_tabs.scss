@@ -1,0 +1,57 @@
+
+// ------------------------
+// Tabs component
+// --------------------------------------------------
+.nav-tabs {
+  margin-bottom: 10px;
+}
+
+.nav-tabs > li > a, 
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus {
+  border: 0;
+  border-bottom: 1px solid $color-default;
+  box-shadow: none;
+  color: inherit;
+  background-color: transparent;
+
+  transition: box-shadow .4s ease;
+}
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+  border: 0;
+  box-shadow: 0 0px 2px -2px $color-primary, inset 0 -1px 0 $color-primary;
+  color: $color-primary;
+  background-color: transparent;
+}
+
+.nav-tabs .dropdown-menu { margin-top: -3em; }
+
+
+// ------------------------
+// Materia tabs effect. Need jquery.mtr-tabs.js
+// --------------------------------------------------
+.mtr-tabs {
+  position: relative;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .mtr-bar { position: absolute; height: 2px; bottom: 0; left: 0; width: 100px; background-color: #ffffff; transition: width, left;}
+  .mtr-bar.expand { transition-duration: 0.12s; transition-timing-function: cubic-bezier(0.4, 0.0, 1, 1);}
+  .mtr-bar.contract { transition-duration: 0.15s; transition-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);}
+}

@@ -1,0 +1,118 @@
+
+
+
+// ------------------------
+// Black / White default
+// --------------------------------------------------
+  $color-black:  rgba(0, 0, 0, 0.54);
+  $color-black-strong:  rgba(0, 0, 0, 0.87);
+  $color-white: rgba(255, 255, 255, 0.87);
+  $color-white-strong: #fff;
+
+// ------------------------
+// Import colors palette first to create Sass variable.
+// --------------------------------------------------
+  @import "colors.scss";
+
+// ------------------------
+// Default Bootstrap colors
+// --------------------------------------------------
+  $color-default: color(grey, 200);
+  $color-primary: color(teal, 600);
+  $color-success: color(green, 500);
+  $color-info: color(light-blue, 500);
+  $color-warning: color(orange, 500);
+  $color-danger: color(red, 500);
+
+  @mixin color-profile-default() {
+    @include colorprofile(grey, 200);
+  }
+  @mixin color-profile-primary() {
+    @include colorprofile(teal, 600);
+  }
+  @mixin color-profile-success() {
+    @include colorprofile(green, 500);
+  }
+  @mixin color-profile-info() {
+    @include colorprofile(light-blue, 500);
+  }
+  @mixin color-profile-warning() {
+    @include colorprofile(orange, 500);
+  }
+  @mixin color-profile-danger() {
+    @include colorprofile(red, 500);
+  }
+
+// ------------------------
+// Other colors
+// --------------------------------------------------
+  $color-ripple: rgba(100, 100, 100, .5);
+  $color-ripple-light: rgba(255,255,255, .5);
+
+  // Special colors
+  $color-muted: color(grey, 500);
+  $color-grey: color(grey, 300);
+
+// ------------------------
+// Responsive Breakpoints - same as Bootstrap default
+// --------------------------------------------------
+
+  $sreen-lg-min: 1200;
+
+  $sreen-md-min: 992;
+  $sreen-md-max: 1199;
+
+  $sreen-sm-min: 768;
+  $sreen-sm-max: 991;
+
+  $sreen-xs-max: 767;
+
+// ------------------------
+// Vertical spacing unit
+// --------------------------------------------------
+  $basespacing: 5;
+
+// ------------------------
+// Baseline for typo
+// --------------------------------------------------
+  $baseline: 16;
+
+// ------------------------
+// Base import
+// --------------------------------------------------
+  @import "mixins.scss";
+  @import "typography.scss";
+  @import "shadows.scss";
+  @import "icons.scss";
+  @import "helpers.scss";
+
+// ------------------------
+// Components
+// --------------------------------------------------
+  @import "components/ripple.scss";
+  @import "components/navbar.scss";
+  @import "components/navbar-panel.scss";
+  @import "components/toolbar.scss";
+  @import "components/toolnav.scss";
+  @import "components/button.scss";
+  @import "components/input.scss";
+  @import "components/table.scss";
+  @import "components/alert.scss";
+  @import "components/label.scss";
+  @import "components/badge.scss";
+  @import "components/pills.scss";
+  @import "components/breadcrumb.scss";
+  @import "components/tabs.scss";
+  @import "components/jumbotron.scss";
+  @import "components/progress-bar.scss";
+  @import "components/panel.scss";
+  @import "components/well.scss";
+  @import "components/pagination.scss";
+  @import "components/pager.scss";
+  @import "components/dropdown-menu.scss";
+  @import "components/modal.scss";
+  @import "components/popover.scss";
+  @import "components/tooltip.scss";
+  @import "components/list-group.scss";
+  @import "components/mtr-list.scss";
+
