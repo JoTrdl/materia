@@ -3731,6 +3731,7 @@ h5 {
     transform-origin: 50%;
     opacity: .5;
     pointer-events: none;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
     -webkit-transition: opacity 0.5s linear .15s, width 0.6s ease, height 0.6s ease, margin 0.6s ease;
     transition: opacity 0.5s linear .15s, width 0.6s ease, height 0.6s ease, margin 0.6s ease;
     will-change: opacity, width, height, margin; }
@@ -4212,6 +4213,8 @@ textarea.form-control {
   padding-top: 0;
   margin: 0;
   margin-top: 5px; }
+  textarea.form-control.floating:focus + label, textarea.form-control.floating.valued + label {
+    top: -1.3em; }
 
 .help-block, .error-block {
   font-size: .9em;
@@ -4244,6 +4247,7 @@ input[type="checkbox"], .checkbox input[type="checkbox"], .checkbox-inline input
   margin-left: -25px;
   border: none;
   -webkit-appearance: none;
+  box-shadow: none;
   appearance: none;
   cursor: pointer;
   outline: 0;
