@@ -3717,10 +3717,10 @@ h5 {
     position: relative; }
   .mtr-btn .mtr-ripple {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    margin-top: -10px;
+    width: 1px;
+    height: 1px;
+    margin-left: -.5px;
+    margin-top: -.5px;
     border-radius: 100%;
     background-color: rgba(100, 100, 100, 0.5);
     -webkit-transform: scale(1);
@@ -3732,8 +3732,8 @@ h5 {
     opacity: .5;
     pointer-events: none;
     -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-    -webkit-transition: opacity 0.5s linear .15s, width 0.6s ease, height 0.6s ease, margin 0.6s ease;
-    transition: opacity 0.5s linear .15s, width 0.6s ease, height 0.6s ease, margin 0.6s ease;
+    -webkit-transition: opacity 0.4s linear .1s, width 0.4s ease, height 0.4s ease, margin 0.4s ease;
+    transition: opacity 0.4s linear .1s, width 0.4s ease, height 0.4s ease, margin 0.4s ease;
     will-change: opacity, width, height, margin; }
     .mtr-btn .mtr-ripple.out {
       opacity: 0; }
@@ -3837,7 +3837,8 @@ h5 {
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 200px;
-    overflow: hidden; }
+    overflow: hidden;
+    width: 100%; }
     .toolbar .toolbar-header .toolbar-title {
       margin-left: 8px; }
   .toolbar .toolbar-nav {
