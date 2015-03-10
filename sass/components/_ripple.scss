@@ -23,10 +23,10 @@
 
   .mtr-ripple {
     position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: -10px;
-    margin-top: -10px;
+    width: 1px;
+    height: 1px;
+    margin-left: -.5px;
+    margin-top: -.5px;
     border-radius: 100%;
     background-color: $color-ripple;
     transform: scale(1);
@@ -36,7 +36,7 @@
 
     -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
     
-    transition: opacity 0.5s linear .15s, width 0.6s ease, height 0.6s ease, margin 0.6s ease; 
+    transition: opacity 0.4s linear .1s, width 0.4s ease, height 0.4s ease, margin 0.4s ease; 
     will-change: opacity, width, height, margin;
     &.out {
       opacity: 0;

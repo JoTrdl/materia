@@ -93,7 +93,8 @@
   };
 
   var onDown = function(e) {
-    if (this.$el.hasClass('disabled') || this.$el.attr('disabled') || this.$el.data('ripple-off') != undefined)
+    var disabled = this.$el.hasClass('disabled') || this.$el.attr('disabled') || this.$el.data('ripple-off') != undefined;
+    if (disabled)
       return;
 
     this.$target = this.$el;
