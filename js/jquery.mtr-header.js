@@ -48,7 +48,6 @@
 
   var onResize = function() {
     this.height = this.$el.height();
-    console.log('resize')
   };
 
   var onScroll = function() {
