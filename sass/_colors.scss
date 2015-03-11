@@ -376,6 +376,10 @@ $profiles: (
       background-color: nth(profile($profile, $weight), 1);
       color: nth(profile($profile, $weight), 2);
     }
+
+    .mtr-fg-#{$profile}-#{$weight} {
+      color: nth(profile($profile, $weight), 1);
+    }
   }
 }
 

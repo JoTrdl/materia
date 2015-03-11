@@ -18,7 +18,7 @@
 // Default Bootstrap colors
 // --------------------------------------------------
   $color-default: color(grey, 200);
-  $color-primary: color(teal, 600);
+  $color-primary: color(cyan, 800);
   $color-success: color(green, 500);
   $color-info: color(light-blue, 500);
   $color-warning: color(orange, 500);
@@ -28,7 +28,7 @@
     @include colorprofile(grey, 200);
   }
   @mixin color-profile-primary() {
-    @include colorprofile(teal, 600);
+    @include colorprofile(cyan, 800);
   }
   @mixin color-profile-success() {
     @include colorprofile(green, 500);
