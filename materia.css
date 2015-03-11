@@ -4594,12 +4594,15 @@ input[type="radio"], .radio input[type="radio"], .radio-inline input[type="radio
   background-color: #eeeeee;
   color: rgba(0, 0, 0, 0.87);
   font-weight: 500;
-  border: 0; }
+  border: 0;
+  padding: 15px; }
   .panel-heading .panel-title {
     font-weight: 500; }
 
 .panel-footer {
-  border: 0; }
+  background-color: inherit;
+  border-top: 1px solid #eeeeee;
+  padding: 15px; }
 
 .panel-default > .panel-heading {
   background-color: #eeeeee;

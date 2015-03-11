@@ -12,12 +12,15 @@
     @include colorprofile(grey, 200);
     font-weight: 500;
     border: 0;
-
+    padding: $basespacing*3px;
+    
     .panel-title { font-weight: 500; }
   }
 
   .panel-footer { 
-    border: 0;
+    background-color: inherit;
+    border-top: 1px solid color(grey, 200);
+    padding: $basespacing*3px;
   }
 
   .panel-default > .panel-heading {
