@@ -5590,13 +5590,14 @@ input[type="radio"], .radio input[type="radio"], .radio-inline input[type="radio
     width: 4em; }
     .mtr-list-item .icon i {
       border-radius: 100%;
-      background-color: #bdbdbd;
       width: 2em;
       height: 2em;
       line-height: 2em;
       font-size: 1.5em;
       color: rgba(255, 255, 255, 0.87);
       text-align: center; }
+  .mtr-list-item.default .icon i {
+    background-color: #eeeeee; }
   .mtr-list-item p {
     color: rgba(0, 0, 0, 0.54);
     margin-bottom: 0; }
