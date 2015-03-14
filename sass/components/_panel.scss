@@ -9,7 +9,7 @@
   }
 
   .panel-heading {
-    @include colorprofile(grey, 200);
+    //@include colorprofile(grey, 200);
     font-weight: 500;
     border: 0;
     padding: $basespacing*3px;
