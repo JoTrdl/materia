@@ -95,6 +95,11 @@ $color-normal-valued: color(grey, 600);
     margin-bottom: 0;
   }
 
+  .form-inline .form-group { 
+    position: relative;
+    .form-control.floating + label { left: 0; }
+  }
+
 // ------------------------
 // Input has-*
 // --------------------------------------------------
